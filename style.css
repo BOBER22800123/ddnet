@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Налаштування фону та розтягування на весь екран */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #8b9299 0%, #3a3f45 50%, #202326 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+/* --- Шапка (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: transparent;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.logo-title {
+    font-size: 28px;
+    color: #ff9900;
+    -webkit-text-stroke: 1px #000;
+}
+
+.logo-subtitle {
+    font-size: 22px;
+    color: #0088ff;
+    -webkit-text-stroke: 1px #000;
+}
+
+/* Навігація */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    color: #000;
+    transition: transform 0.2s, opacity 0.2s;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-yellow { background-color: #a29b00; color: #000; }
+.btn-bright-yellow { background-color: #d1e231; color: #000; }
+.btn-blue { background-color: #0000ff; color: #fff; }
+.btn-black { background-color: #000000; color: #fff; }
+
+.nav-btn.active {
+    outline: 2px solid #ffffff;
+    transform: scale(1.05);
+}
+
+/* --- Контент сторінок --- */
+main, .page-content, .content-container {
+    flex: 1 0 auto;
+}
+
+.page-content {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.page-content h1 {
+    color: #ff9900;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.page-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- Зображення гри на сторінках --- */
+.game-image-container {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.game-img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Форма контактів --- */
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 15px;
+}
+
+.form-input::placeholder {
+    color: #ccc;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ff9900;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn {
+    background-color: #ff9900;
+    color: #000;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #e08500;
+    transform: translateY(-2px);
+}
+
+/* --- Підвал (Footer) --- */
+.footer {
+    flex-shrink: 0;
+    background: linear-gradient(90deg, #ff9900 0%, #0088ff 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    width: 100%;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+    transform: scale(1.15);
+    color: #f0f0f0;
+}
